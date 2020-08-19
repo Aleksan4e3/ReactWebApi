@@ -64,22 +64,24 @@ class RegistrationForm extends React.Component {
         return <Form onSubmit={this.props.user ? this.submitEdit : this.submitNew}>
             <FormGroup>
                 <Label for="name">Name:</Label>
-                <Input type="text" name="name" value={this.state.name ? this.state.name : ''} />
+                <Input type="text" name="name" value={this.state.name ? this.state.name : ''} onChange={this.onChange} />
             </FormGroup>
             <FormGroup>
                 <Label for="document">Document:</Label>
-                <Input type="text" name="document" value={this.state.document ? this.state.document : ''} />
+                <Input type="text" name="document" value={this.state.document ? this.state.document : ''} onChange={this.onChange} />
             </FormGroup>
             <FormGroup>
                 <Label for="email">Email:</Label>
-                <Input type="email" name="email" value={this.state.email ? this.state.email : ''} />
+                <Input type="email" name="email" value={this.state.email ? this.state.email : ''} onChange={this.onChange} />
             </FormGroup>
             <FormGroup>
                 <Label for="phone">Phone:</Label>
-                <Input type="text" name="phone" value={this.state.phone ? this.state.phone : ''}
+                <Input type="text" name="phone" value={this.state.phone ? this.state.phone : ''} onChange={this.onChange}
                     placeholder="+1 999-999-9999" />
             </FormGroup>
             <Button>Send</Button>
         </Form>;
     }
 }
+
+export default RegistrationForm;
